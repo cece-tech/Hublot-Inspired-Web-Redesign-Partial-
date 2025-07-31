@@ -29,13 +29,11 @@ To get a copy of this project up and running on your local machine for developme
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git)
+    git clone https://github.com/cece-tech/Hublot-Inspired-Web-Redesign-Partial-.git)](https://github.com/cece-tech/Hublot-Inspired-Web-Redesign-Partial-.git
     ```
-    (Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub username and the name you give your repository.)
-
 2.  **Navigate to the project folder:**
     ```bash
-    cd YOUR_REPOSITORY_NAME
+    cd Hublot-Inspired-Web-Redesign-Partial
     ```
 
 3.  **Open `index.html`:**
@@ -54,10 +52,3 @@ To get a copy of this project up and running on your local machine for developme
 
 * **Fonts:** Standard web-safe fonts like Arial, Helvetica, and Times New Roman are used, which are typically available on most systems. No custom font libraries (like Google Fonts) were explicitly linked.
 
-**Before you finalize this `README.md`:**
-
-* **Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPOSITORY_NAME`** with your actual details.
-* **Make sure all your project files (HTML, CSS, JS, images, logos) are correctly structured and pushed to your repository.**
-* **Consider adding a screenshot or GIF of the deployed project** to the README. This greatly enhances visual appeal and gives visitors an immediate idea of what the project looks like. You can upload images to your repository and then reference them like `![Screenshot of Section](path/to/your/screenshot.png)`.
-
-This `README.md` should cover all the points you listed and provide a comprehensive overview of your project!
