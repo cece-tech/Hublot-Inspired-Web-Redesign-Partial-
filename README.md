@@ -37,7 +37,6 @@ To get a copy of this project up and running on your local machine for developme
 
 3.  **Open `index.html`:**
     Locate the `index.html` file in the root of the project folder and open it with your preferred web browser. All content, styling, and interactivity should load directly.
-    <img width="602" height="880" alt="image" src="https://github.com/user-attachments/assets/da30ac7b-773d-484b-9f11-d6d9613d5d0b" />
 
 ## Challenges Faced & Solutions
 
@@ -51,4 +50,4 @@ To get a copy of this project up and running on your local machine for developme
 ## External Libraries or Assets Used
 
 * **Fonts:** Standard web-safe fonts like Arial, Helvetica, and Times New Roman are used, which are typically available on most systems. No custom font libraries (like Google Fonts) were explicitly linked.
-
+ <img width="602" height="880" alt="image" src="https://github.com/user-attachments/assets/da30ac7b-773d-484b-9f11-d6d9613d5d0b" />
