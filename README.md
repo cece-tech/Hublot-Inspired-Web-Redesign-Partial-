@@ -29,7 +29,7 @@ To get a copy of this project up and running on your local machine for developme
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/cece-tech/Hublot-Inspired-Web-Redesign-Partial-.git)](https://github.com/cece-tech/Hublot-Inspired-Web-Redesign-Partial-.git
+    git clone https://github.com/cece-tech/Hublot-Inspired-Web-Redesign-Partial-.git)
     ```
 2.  **Navigate to the project folder:**
     ```bash
