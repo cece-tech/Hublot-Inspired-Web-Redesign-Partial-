@@ -1,6 +1,5 @@
 # Hublot-Inspired-Web-Redesign-Partial-
 <img width="1917" height="1013" alt="Screenshot 2025-07-31 143617" src="https://github.com/user-attachments/assets/96e43b93-a2c7-4df9-929d-5c01a7a522d3" />
-<img width="602" height="880" alt="image" src="https://github.com/user-attachments/assets/da30ac7b-773d-484b-9f11-d6d9613d5d0b" />
 
 This project is a hands-on exploration into building sophisticated, responsive web layouts. From intricate grid systems to a custom JavaScript-powered news carousel, it demonstrates a strong command of HTML, CSS, and vanilla JS in replicating a high-end brand's digital presence.
 
@@ -38,6 +37,7 @@ To get a copy of this project up and running on your local machine for developme
 
 3.  **Open `index.html`:**
     Locate the `index.html` file in the root of the project folder and open it with your preferred web browser. All content, styling, and interactivity should load directly.
+    <img width="602" height="880" alt="image" src="https://github.com/user-attachments/assets/da30ac7b-773d-484b-9f11-d6d9613d5d0b" />
 
 ## Challenges Faced & Solutions
 
