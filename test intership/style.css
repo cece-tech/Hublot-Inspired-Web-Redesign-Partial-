@@ -1,0 +1,2287 @@
+* {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===================
+    TOP NAVIGATION
+   =================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0 20px;
+  height: 60px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  width: 100%;
+}
+
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+  order: -1; 
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #111;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.logo {
+  height: 1.1rem;
+  padding-left: 2em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: none;
+  padding-left: 10em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.80rem;
+  letter-spacing: 0.15em;
+  transition: color 0.5s;
+}
+
+.hover-underline-animation-left {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline-animation-left::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom left;
+  transition: 0.3s ease;
+}
+.hover-underline-animation-left:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 0 1rem;
+  height: 70px;
+  margin-left: 3rem;
+}
+
+.nav-search i {
+  color: #222;
+  font-size: 1.2rem;
+}
+
+.nav-search input {
+  border: none;
+  outline: none;
+  margin-left: 1em;
+  font-style: italic;
+  font-size: 0.80rem;
+  color: #888;
+  background: transparent;
+  width: 20em;
+  font-family: 'Lora', 'Merriweather', serif;
+  text-align: left;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  padding: 0 .50rem;
+  height: 70px;
+}
+
+.nav-icons i {
+  font-size: 1rem;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-icons i:hover {
+  color: #bfa46d;
+}
+
+.nav-icons button {
+  border: none;
+  position: relative;
+  align-items: center;
+  font-size: 0.80rem;
+  color: #888;
+  border-left: 1px solid #eee ;
+  border-right: 1px solid #eee;
+  background: transparent;
+  padding: 2rem;
+  width: auto;
+  height: 5rem;
+}
+
+
+.hublotista {
+  font-style: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.80rem;
+  letter-spacing: 0.15em;
+  color: #111;
+  margin: 0 1em;
+}
+
+
+/* ===================
+    HERO SECTION/CLASSIC
+    FUSION ESSENTIAL TAUPE
+   =================== */
+#hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-left: 60px;
+  max-width: 600px;
+}
+
+.hero-content h3 {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 18px;
+  margin-left: 3rem;
+  text-align: left;
+}
+
+.hero-content h1 {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-left: 3rem;
+  font-weight: 800;
+  font-size: 3.5em;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.hero__hover-underline-animation {
+    display: inline-block;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border-bottom: transparent; 
+    padding-bottom: 2px; 
+    margin-top: 2rem;
+    margin-left: 3rem;
+    transition: color 0.2s; 
+    position: relative; 
+}
+
+.hero__hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: red; 
+
+  
+    transform: scaleX(1);
+    transform-origin: bottom right;
+
+ 
+    transition: transform 0.50s ease-out;
+}
+
+.hero__hover-underline-animation:hover::after {
+ 
+    transform: scaleX(0);
+}
+
+/* ===================
+    THREE CONTENT BUTTON 
+        SECTION
+   =================== */
+
+.content{
+    background-color:#181818;
+    height: 30vh;
+    justify-content: center;
+}
+
+.outer {
+  margin:0;
+  display: flex; 
+  gap: 20px; 
+  justify-content: center;
+}
+
+.button {
+  
+  border: 1px solid white; 
+  border-radius: 0px; 
+  width: 250px; 
+  height: 50px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  overflow: hidden;
+  margin-top: 4rem; 
+
+ 
+  background: linear-gradient(to right, #181818 50%, white 50%);
+  background-size: 200% 100%; 
+  background-position: right bottom; 
+  transition: background-position 0.5s ease-out; 
+}
+
+.button:hover {
+  background-position: left bottom; 
+}
+
+
+.button.dark {
+  
+  background: linear-gradient(to right,  #333333 50%, #181818 50%); 
+  background-size: 200% 100%;
+  background-position: right bottom; 
+  border: 1px solid white; 
+}
+
+.button.dark:hover {
+  background-position: left bottom; 
+}
+
+.text {
+  text-align: center;
+  font-size: 0.70em;
+  font-weight: 700; 
+  line-height: normal;
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  transition: color 0.5s ease-out; 
+}
+
+
+.button .text {
+  color: black;
+}
+
+
+.button:hover .text {
+  color: white;
+}
+
+
+.button.dark .text {
+  color: white;
+}
+
+
+.button.dark:hover .text {
+  color: white;
+}
+
+/* ===================
+    EXPLORE WATCHES 
+        SECTION
+   =================== */
+
+.watch-section-container {
+    background-color: #181818;
+    width: 100vw;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+.watch-item .watch-img {
+    display: none; 
+    width: 100%;
+    max-width: 17rem; 
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+ 
+    transition: opacity 0.5s ease-in-out;
+    position: absolute; 
+    top: 10px;
+    transform: translateX(-50%);
+}
+
+.watch-item .watch-img.active-img {
+    display: block; 
+    opacity: 1;
+    position: static; 
+    transform: translateX(0); 
+}
+
+.watch-img {
+  width: 340px;
+  height: auto;
+  margin-bottom: 36px;
+  object-fit: contain;
+  background: transparent;
+}
+
+.watch-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
+
+.watch-divider {
+    border: none;
+    border-top: 2px solid #e00000;
+    width: 30px;
+    margin-top: none;
+    margin-bottom: 2rem; 
+}
+
+.watch-collection-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+.watch-row {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+
+.watch-label span {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  text-align: center;
+  display: block;
+}
+
+
+
+
+.watch-section-container {
+    background-color: #181818;
+    width: 100vw;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+.watch-item .watch-img {
+    display: none; 
+    width: 100%;
+    max-width: 17rem; 
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+ 
+    transition: opacity 0.5s ease-in-out;
+    position: absolute; 
+    top: 10px;
+    transform: translateX(-50%);
+}
+
+.watch-item .watch-img.active-img {
+    display: block; 
+    opacity: 1;
+    position: static; 
+    transform: translateX(0); 
+}
+
+
+/* ===================
+    HUBLOTISTA MEMBER 
+        SECTION
+   =================== */
+.hublotista-section {
+    position: relative;
+    background:#e8e8e8;
+    height: 70vh;
+    width: 100vw; 
+    display: flex;
+    align-items: center; 
+    background-image: url('image/events-hublotista-homepage-mobile-2.jpg'); 
+    background-repeat: repeat;
+    vertical-align: middle; 
+    background-position: center; 
+}
+
+.hublotista-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+}
+
+.hublotista-content-box {
+    position: relative; 
+    z-index: 2; 
+    background: #fff; 
+    color: #181818; 
+    padding: 2rem 3rem; 
+    margin: 7rem 5rem; 
+    border-radius: 0; 
+    max-width: 30rem; 
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.08); 
+    display: flex;
+    flex-direction: column;
+}
+
+.hublotista-content-box h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    color: #181818;
+    text-align: left;
+}
+
+.hublotista-content-box p {
+    font-family: 'Lora', 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #181818;
+    margin-bottom: 48px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.hublotista-button {
+    background: #181818; 
+    color: #fff; 
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.80em;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    box-shadow: none;
+    width: 10rem; 
+    height: 3rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #2B2B2B 50%, #000000 50%);
+    background-size: 200% 100%;
+    background-position: right center;
+    transition: 0.5s ease; 
+}
+
+.hublotista-button:hover {
+    color: #fff; 
+    background-position: left center; 
+}
+
+/* ===================
+      WATCH IMAGE
+        SECTION
+   =================== */
+
+.watch-imgs {
+    background-image: url('image/image.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    height: 50rem;
+    margin-bottom: 12px;
+    padding: 1vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden;
+    max-width: 1920px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================
+        BROWN-SUITE
+         SECTION
+   =================== */
+
+.container4 {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 20px; 
+    padding: 20px; 
+    flex-wrap: wrap; 
+}
+
+
+.container4 a {
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 500px; 
+    text-decoration: none; 
+  
+}
+
+
+.brown-suite-img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    object-fit: cover; /* Ensures the image covers its container without distortion, potentially cropping some parts */
+}
+
+.brown-suite {
+    padding: 2vh;
+}
+
+/* ===================
+      WATCH IMAGE
+        SECTION
+   =================== */
+
+.collection {
+    background-color: #e0e0e0; /* Light grey background from image */
+    background-image: url('image/Classic-Fusion-Taupe-42-mm-Background_1.jpg'); 
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: top; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 0.3rem; /* Some padding around the content box */
+    box-sizing: border-box;
+}
+
+.container5 {
+    background-color: transparent; 
+    color: white; /* Darker text color from image */
+    padding: 3rem 4rem; /* Desktop padding */
+    text-align: center; /* Center text */
+    max-width: 800px; 
+    margin: 0 auto; /* Center the box */
+}
+
+.container5 h1 {
+    font-size: 0.9rem; 
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.container5 p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 715;
+    line-height: 1.3;
+    letter-spacing: 0.1em;
+    margin-bottom: 5rem;
+    color: white; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    letter-spacing: 0.2em;
+    background-color: white; 
+    color: black;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #e8e8e8 50%, white 50%); 
+    background-size: 200% 100%; /* Double the width to hide one half */
+    background-position: right center; /* Start with the transparent half visible */
+    transition: 0.99s ease, 0.99s ease; 
+}
+
+.btn:hover {
+    background-color: #e8e8e8; 
+     background-position: left center;
+   
+}
+
+.container5 a {
+    text-decoration: none; 
+}
+
+/* ===================
+    CRAFTMANSHIP-BOUTIQUES
+        SECTION
+   =================== */
+
+.craftsmanship-boutiques {
+    padding: 5% 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #000000 50%, #FFFFFF 50%);
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Flex Container for the two cards */
+.split-color {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.split-color a {
+    flex: 1 1 calc(50% - 10px); /* 50% minus half of the gap for precise sizing */
+    min-width: 320px; /* Minimum width for each column before wrapping */
+    max-width: calc(50vw - 10px); /* Max width for each column, half of viewport width minus half of the gap */
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background-color: #fff; /* White background for the content area */
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+
+/* Styling for the image within each card */
+.craftsmanship-boutiques-img {
+    width: 100%; /* Image fills its container */
+    height: 90vh; /* Fixed height for the image to match the proportion in the image */
+    object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
+    display: block;/* Remove extra space below image */
+}
+
+.craft {
+    background-color: white;
+    width: 40vw;
+    margin-top: -150px;
+    margin-left:3.5rem;
+    padding: 1rem;
+    align-items: center; 
+    text-align: left; /* Text aligns to the left as in the image */
+    position: relative;
+    justify-content: inline-flex; /* Pushes button to the bottom if content is short */
+}
+
+/* "OUR WORLD" / "BOUTIQUES" text (h3) */
+.craft h3 {
+    font-family: 'Arial', sans-serif; /* Common sans-serif font */
+    font-size: 0.7em; /* Smaller font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.5em; /* Slight letter spacing */
+    color:black; /* Grey color as in the image */
+    margin-top: 2rem;
+    margin-left: 2.5rem; /* Remove default top margin */
+    margin-bottom: 10px; /* Space below h3 */
+    font-weight: bold; /* Normal weight */
+}
+
+.red-line {
+    border: none; /* Remove default border */
+    border-top: 0.1px solid #e00000; /* Solid red line, 2px thickness as seen in image */
+    width: 7vw; /* Specific width as seen in the picture */
+    margin-top: 1.5rem; /* Small margin from "NEWS" above it */
+    margin-bottom: 1.5rem; /* Space between the line and the H1 below it */
+    display: block; /* Ensure it behaves as a block element */
+    margin-left: 2.5rem; /* Align to the left, matching text-align: left of parent */
+    margin-right: auto; /* Required with margin-left: 0 for left alignment */
+}
+/* Main Heading (H1) */
+.craft h1 {
+    font-family: 'Arial', sans-serif; /* Common sans-serif font */
+    font-size: 1.8em; /* Larger font size for main heading */
+    font-weight: 800; /* Bold as in the image */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase; /* Uppercase text */
+    color: #000; /* Black color */
+    margin-top: 0;
+    margin-left: 2.5rem; /* Remove default top margin */
+    margin-bottom: 3rem; /* Space below h1 */
+}
+
+/* "LEARN MORE" Button */
+.craft button {
+    font-family: 'Arial', sans-serif; /* Common sans-serif font */
+    background-color: transparent; /* Transparent background */
+    color: #000;
+    border: 1px solid #000; 
+    margin-left: 2.5rem; /* Pushes the button to the bottom of the flex container */
+    padding: 1rem 2.5rem; /* Padding inside the button */
+    font-size: 0.7em; /* Smaller font size for button text */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Letter spacing */
+    cursor: pointer; /* Indicate it's clickable */
+    background: linear-gradient(to right, #e8e8e8 50%, Transparent 50%); /* Black on left half, transparent on right half */
+    background-size: 200% 100%; /* Double the width to hide one half */
+    background-position: right center; /* Start with the transparent half visible */
+
+    /* Transition for background-position AND color for the text */
+    transition: 0.99s ease, 0.99s ease; /* 0.99 seconds transition for both */
+}
+
+.craft button:hover {
+    background-color: #e8e8e8; /* Slightly lighter background on hover */
+     background-position: left center; /* Slide to the left, revealing the black half */
+   
+}
+
+/* ===================
+    HUBLOT PRODUCTION
+        SECTION
+   =================== */
+
+.hublot-product-section {
+    display: flex; /* Establishes a flex container for the two columns */
+    min-height: 30vh; /* Make section at least 80% of viewport height */
+    background-color: #3F5F6B; /* The background color from the right side of the image */
+    color: #fff; /* Default text color for this section */
+    box-sizing: border-box;
+  
+}
+
+.product-left-column {
+    flex: 1; /* Takes up available space */
+    background-image: url('image/AITANA_HUBLOT_STUDIO_0083.jpg'); /* Use the entire image as background */
+    background-size: cover; /* Cover the entire area */
+    background-position: left center; /* Position the background image to show the left part (person) */
+    background-repeat: no-repeat;
+    min-width: 70%; /* Ensure it takes at least half the width */
+}
+
+.product-right-column {
+    flex: 1; /* Takes up the other half of the available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    padding: 40px 20px; /* Padding inside the column */
+    text-align: center;
+}
+
+.product-header {
+    font-size: 1.2em; /* Smaller, as seen in the image */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.product-sub-header {
+    font-size: .80em; /* "IS WEARING" text size */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px; /* Space before watch image */
+}
+
+.product-watch-image-container img {
+    max-width: 20rem; /* Adjust size of the watch image */
+    height: auto;
+    margin-bottom: 30px; /* Space below watch image */
+    display: block; /* Remove extra space below img */
+}
+
+.product-category-text {
+    font-size: .80em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.product-name-text {
+    font-size: .80em;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.learn-more-button {
+    background-color: #1a3657; /* Dark blue button background */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex; /* For icon alignment */
+    align-items: center;
+    gap: 8px; /* Space between text and icon */
+  
+    background: linear-gradient(to right, #2a4c70 50%, #1a3657 50%);
+    background-size: 200% 100%; /* Double the size for the sliding effect */
+    background-position: right center; /* Start with the transparent half visible */
+    transition: 1s ease, 1s ease;
+    /* Changed duration to 0.1s as 3s is very slow for a button hover. */
+}
+
+.learn-more-button:hover {
+    background-color: #2a4c70; /* Slightly lighter on hover */
+    background-position: left; /* Slide to the left, revealing the lighter black */
+}
+
+/* ===================
+       ADA-AITANA
+        SECTION
+   =================== */
+
+.ada-aitana {
+    padding: 50px 0;
+    background-color: #fff; /* White background for the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container {
+    position:relative;
+    width: 90%; /* Adjust as needed */
+    overflow: hidden; /* Hide parts of slides that are outside the viewport */
+}
+
+.carousel-track-wrapper {
+    overflow: hidden; /* Ensures only visible slides are shown */
+}
+
+.carousel-track {
+    display:flex;
+    transition:0.5s ease-in-out; /* Smooth transition for sliding */
+}
+
+.carousel-slide {
+    /* Each slide takes up 1/3 of the container width minus spacing */
+    flex: 0 0 calc(100% / 3 - 20px); /* Show 3 items, with 10px margin on each side (total 20px) */
+    margin: 1rem; /* Space between slides */
+    box-sizing: border-box; /* Include border in width calculation */
+    text-align: center;
+    align-items: center;
+}
+
+.carousel-slide a {
+    display: block; /* Make the link a block to contain image and text */
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+}
+
+.carousel-slide img {
+    width: auto;
+    height: 50vh; /* Fixed height for consistency */
+    object-fit: auto; /* Cover the area, cropping if necessary */
+    display: block; /* Remove extra space below image */
+    border-radius: 2px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.slide-caption {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    overflow: hidden; /* Hide overflow */
+}
+
+/* ADA-AITANA SECTION */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%; /* Circular button */
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure buttons are above slides */
+    color: #333;
+}
+
+.carousel-button:hover {
+    background-color: #333; 
+    color: #fff; 
+}
+
+.carousel-button.prev {
+    left: 10px; 
+}
+
+.carousel-button.next {
+    right: 10px; 
+}
+
+/* ===================
+        NEWS
+        SECTION
+   =================== */
+
+.watches_news {
+    background-color: #fff; /* White background for the whole section */
+    padding: 0;
+    margin: 0;
+    position: relative; /* Needed for positioning elements within it */
+}
+
+/* Container for the content - important for max-width and centering */
+.container8 {
+    max-width: 1200px; /* Limits the overall width of the content, matching image */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0;
+    position: relative;
+
+}
+
+
+.news {
+    display: flex; /* Use flex to potentially arrange content if needed, though not strictly required here */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally (classic and taupe) */
+    width: 100%; /* Ensure it spans full width of its container8 */
+    position: relative; /* Context for its children */
+}
+
+
+.taupe {
+
+    text-align: left; /* Essential for the hr and text to align to the left */
+}
+
+/* Styles for the red underline */
+.underlined-red {
+    border: none; /* Remove default border */
+    border-top: 0.1rem solid #e00000; /* Solid red line, 2px thickness as seen in image */
+    width: 7vw; /* Specific width as seen in the picture */
+    margin-top: 1rem; /* Small margin from "NEWS" above it */
+    margin-bottom: 1rem; /* Space between the line and the H1 below it */
+    display: block; /* Ensure it behaves as a block element */
+    margin-left: 0; /* Align to the left, matching text-align: left of parent */
+    margin-right: auto; /* Required with margin-left: 0 for left alignment */
+}
+
+/* The .classic div which will hold the background image of the two watches */
+.classic {
+    display: block; /* Ensures it takes up space */
+    width: 95vw; /* Full width of its parent (.news or .container8) */
+    height: 95vh; /* Fixed height for the image section as seen in the screenshot */
+    background-image: url('image/Classic-Fusion-Taupe-42-mm-LS-4.jpg'); /* Your specified background image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* No margin here, as it should span full width */
+}
+
+/* The .taupe div which contains the text and button and has the white background */
+.taupe {
+    background-color: white; /* Explicitly white background for this content block */
+    position: relative; /* Position relative to allow margin-top to pull it up */
+    margin-top: -150px; /* Adjusted to pull it up significantly, matching the screenshot's overlap */
+    margin-left: auto; /* Center the block horizontally */
+    margin-right: auto; /* Center the block horizontally */
+    text-align: left; /* Text aligns to the left as in the screenshot */
+    padding: 40px 60px; /* Generous padding inside the white news block */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Optional: subtle shadow to make it pop slightly */
+    width: 80vw; /* Constrain width of the news block itself for readability */
+    z-index: 10; /* Ensure it stacks above the image area */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.news h3 {
+    font-size: 0.8em; /* Small font size for "NEWS" */
+    text-transform: uppercase;
+    color: black; /* Grey color for "NEWS" */
+    letter-spacing: 0.5em;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.news h1 {
+    font-size: 2.2em; /* Large, prominent font size for the main heading */
+    text-transform: uppercase;
+    color: #000;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.news button {
+    padding: 12px 25px; /* Adjusted padding for button size */
+    border: 1px solid #000; /* Black 1px border to match screenshot */
+    color: #000; /* Initial text color */
+    cursor: pointer;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Background for the slide effect */
+    background: linear-gradient(to right, #e8e8e8 50%, transparent 50%); /* Black on left half, transparent on right half */
+    background-size: 200% 100%; /* Double the width to hide one half */
+    background-position: right center; /* Start with the transparent half visible */
+
+    /* Transition for background-position AND color for the text */
+    transition: 0.99s ease, color 0.99s ease; /* 3 seconds transition for both */
+}
+
+.news button:hover {
+    background-position: left center; /* Slide to the left, revealing the black half */
+   /* Change text color to white on hover */
+}
+
+/* ===================
+       NEWS-EVENTS
+        SECTION
+   =================== */
+
+.news-events-section {
+    background-color: #000;
+    padding: 50px 20px; /* Adjust padding for spacing around content */
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of pages buttons */
+    overflow: hidden; /* Crucial to hide overflowing cards when sliding */
+}
+
+.section-title {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: left;
+    max-width: 1200px; /* Added max-width for consistency */
+    margin-left: auto; /* Center the title area */
+    margin-right: auto;
+    padding-left: 6rem;
+}
+
+.news-events-container {
+    display: grid; /* Default for desktop: grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking equal space. Gap between columns. */
+    gap: 20px;
+    max-width: 1200px; /* Max width for the container of the three cards */
+    margin: auto; /* Center the container */
+    transition: transform 0.5s ease-in-out; /* For smoother JS transitions */
+    box-sizing: border-box; /* Ensure padding/border is included in width calculation */
+}
+
+.news-event-card {
+    background-color: #000; /* Cards are black/dark */
+    color: #fff; /* Default text color for card content */
+    text-align: left; /* Text inside cards aligns left */
+    overflow: visible;
+    display: flex; /* Use flexbox for image and content stacking */
+    flex-direction: column; /* Stack image and content vertically */
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Fixed height for consistent image presentation */
+    overflow:visible;
+}
+
+.news-event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    display: block;
+}
+
+.instagram-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the overlay */
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.instagram-overlay .hublot-logo {
+    width: 15px; /* Adjust logo size */
+    height: 15px;
+    margin-right: 5px;
+    object-fit: contain;
+    background:none; /* Ensure no background for the logo itself */
+}
+
+.hublot-insta-logo {
+    width: 3rem;
+}
+
+.insta-hublot-text {
+    font-family:'Arial Narrow Bold', sans-serif, serif;
+    font-size:small;
+    font-weight: 700;
+    position: relative;
+    margin-top: -2rem;
+    margin-left: 3.5rem;
+    letter-spacing: 0.1em;
+}
+
+.insta-description.short {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: white;
+    margin-top: 2rem;
+    flex-grow: 1;
+    font-size: 1em;
+    font-style: normal;
+}
+
+.insta-description.short span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 0.05em solid red;
+    transition: 1s ease;
+}
+
+.insta-description.short span:hover {
+    border-bottom: 0.1em solid white;
+}
+
+.badge-logo {
+    width: 1rem;
+    margin-top: -1.1rem;
+    margin-left: 8.8rem;
+}
+
+.card-content {
+    padding: 20px 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content-underline-red {
+    border: none;
+    border-top: 0.1rem solid gray;
+    width: 1.5vw;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.card-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.05em;
+    line-height: 1.6;
+    color:white;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-description span {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.card-description.short {
+    font-size: 0.95em;
+    line-height: 1.5;
+    font-style: normal;
+}
+
+.card-button {
+    background-color: black;
+    display: inline-block;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    width: fit-content;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border: none;
+    border-bottom: transparent; /* No direct border for the underline */
+    padding-bottom: 2px; /* Space for the pseudo-element underline */
+    margin-top: auto;
+    position: relative; /* Needed for positioning the ::after pseudo-element */
+    /* Remove text-align: center on mobile, keep align-self: flex-start */
+    align-self: flex-start; /* Ensure button aligns left with text */
+}
+
+.card-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: red; /* The color of the underline */
+    transform: scaleX(1);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.card-button:hover::after {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+/* Carousel Navigation and Pagination Styles */
+/* These classes are for the *news-events* carousel */
+.carousel-nav-button { /* Renamed from .pages-nav-button to be more generic for news-events */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.1s ease;
+    display: none; /* Hidden by default, JavaScript will toggle this */
+}
+
+.carousel-nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-nav-button.prev-slide {
+    left: 10px;
+}
+
+.carousel-nav-button.next-slide {
+    right: 10px;
+}
+
+.carousel-pagination { /* Renamed from .pages-pagination to be more generic for news-events */
+    text-align: center;
+    margin-top: 20px;
+    display: none; /* Hidden by default, JavaScript will toggle this */
+    display: flex; /* Use flex to center dots */
+    justify-content: center;
+    gap: 8px; /* Space between dots */
+}
+
+.carousel-pagination .dot { /* Added specificity for news-events dots */
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.carousel-pagination .dot.active { /* Added specificity for news-events active dots */
+    background-color: #fff;
+}
+
+/* ===================
+        SIGN-UP
+        SECTION
+   =================== */
+
+aside {
+    background-color: #262626; 
+}
+
+.signup_section {
+
+    color: white;
+    padding: 4rem; 
+    text-align: left; 
+    display: flex; 
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center content if section height is greater than content */
+    align-items: flex-start; /* Align content to the left within the flex container */
+}
+
+/* Styling for the main heading "KEEP ME UPDATED" */
+.signup_section h1 {
+    font-family: 'Arial Black', sans-serif; 
+    font-size: 2.5em; 
+    color: white; 
+    margin-left: 6rem; 
+    font-weight: 900;
+    letter-spacing: 2px; 
+}
+
+/* Styling for the sub-heading*/
+.signup_section h2 {
+    font-family: 'Lora', 'Merriweather', serif; 
+    font-size: 1.1em; 
+    color: #cccccc; 
+    margin-top: 1rem; 
+    margin-left: 6rem; 
+    font-weight: normal; 
+}
+
+/* Styling for the "Sign up" button */
+.signup_section button {
+    background-color: white;
+    color: #333333; 
+    margin-top: 3rem;
+    margin-left: 6rem;
+    padding: 15px 40px; /* Generous padding for a larger button */
+    font-family: 'Arial', sans-serif; 
+    font-size: 1em;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    cursor: pointer; 
+    font-weight: bold;
+    background: linear-gradient(to right, #e8e8e8 50%, White 50%); /* Black on left half, transparent on right half */
+    background-size: 200% 100%; /* Double the width to hide one half */
+    background-position: right center; /* Start with the transparent half visible */
+    transition: 0.99s ease, 0.99s ease; /* 3 seconds transition for both */
+}
+
+.signup_section button:hover {
+    background-color: #e8e8e8; /* Slightly lighter background on hover */
+     background-position: left center; /* Slide to the left, revealing the black half */
+}
+
+/* ===================
+       BACK-TO-TOP
+        SECTION
+   =================== */
+
+.back-to-top {
+    position: fixed; /* Keeps the button in a fixed position on the screen */
+    bottom: 20px; /* 20px from the bottom of the viewport */
+    right: 20px; /* 20px from the right of the viewport */
+    background-color: #333; /* Dark background similar to the image */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding inside the button */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-family: sans-serif; /* A clean font */
+    font-size: 14px; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    display: flex; /* To align text and arrow */
+    align-items: center; /* Vertically align items */
+    gap: 5px; /* Space between text and arrow */
+    cursor: pointer; /* Indicates it's clickable */
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+.back-to-top:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+.back-to-top .arrow-up {
+  color: white; /* White arrow color */
+    font-size: 18px; /* Larger arrow */
+    line-height: 1; /* Adjust line height for better alignment */
+}
+
+
+
+/* ===================
+       BACK-TO-TOP
+        SECTION
+   =================== */
+
+footer {
+    background-color: #000; /* Assuming a dark background for the footer */
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 5rem;
+}
+
+.footer_logo {
+    margin-bottom: 5rem;
+    padding-top: 2rem; /* Space above the logo */
+    padding-bottom: 2rem;
+}
+
+.footer_logo img {
+    width: 3rem; /* Adjust size to match picture */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the logo */
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 18px 25px; /* Vertical gap, Horizontal gap (adjust horizontal gap for better wrapping) */
+    list-style: disc;
+    padding: 0; /* Add horizontal padding to prevent links from touching edges */
+    margin: 2rem; /* Margin above/below, center the ul itself */
+    max-width: 20vv; /* Constrain max width for better readability and wrapping */
+}
+
+.footer-nav .words a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.7em; /* Adjusted slightly for better fit, 0.95rem is fine too */
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    transition: color 0.2s;
+    list-style: disc;
+    padding: 0; /* Smaller horizontal padding for words to make them fit */
+    white-space: none; /* Prevent individual words from breaking lines */
+}
+
+/* Underline animation for footer nav links */
+.footer-nav .words a {
+    display: inline-flex;
+    position: relative;
+}
+.footer-nav .words a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px; /* Slightly below the text */
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.footer-nav .words a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.footer-language { /* Corrected class name */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+    gap: 0; /* No explicit gap here, pipe will create separation */
+    list-style: none;
+    padding: 0;
+    margin: 30px 0; /* Margin above and below language section */
+}
+
+.footer-language .language a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.7em; /* Consistent font size with nav */
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: color 0.2s;
+    padding: 0 5px; /* Padding for individual language links */
+}
+
+/* Separator for language links */
+.footer-language .language.separator a::before {
+    content: '|';
+    display: inline-block;
+    padding-right: 10px; /* Space between pipe and word */
+    color: #fff; /* Color of the pipe */
+}
+
+/* Underline animation for language links */
+.footer-language .language a {
+    display: inline-block;
+    position: relative;
+}
+.footer-language .language a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.footer-language .language a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.social_media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 30px; /* Space above social icons */
+    margin-bottom: 25px; /* Space below social icons */
+}
+
+.social_media-icons a {
+    color: #fff;
+    font-size: 1.2em; /* Size of the icons */
+    transition: color 0.2s;
+    text-decoration: none; /* Remove underline for links */
+}
+
+.social_media-icons a:hover {
+    color: #e00000; /* Example hover color (Hublot red) */
+}
+
+
+/* Copyright line */
+footer::after {
+    content: "© 2025 Hublot - All intellectual property rights reserved"; /* */
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #ccc;
+    font-size: 0.9em; /* Slightly smaller font for copyright */
+    margin-top: 24px;
+    letter-spacing: 1px;
+}
+
+
+/* ===================
+   MEDIA QUERIES
+   =================== */
+
+/* NAVBAR/ HAMBURGER MENU SECTION */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    min-height: 60px;
+    padding: 10px 15px;
+    position: relative;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: inline-block;
+    height: auto;
+    position: absolute;
+    align-items: center;
+    left: 2em;
+    transform: translateY(-50%);
+    padding-top: 1.5em;
+  }
+
+  .menu-icon span {
+    width: 20px;
+    height: 2px;
+    margin: 4px 0;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  /* Top row with logo and icons */
+  .nav-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+  }
+
+  .logo {
+    height: 20px;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  .nav-icons button {
+    position: flex;
+    height: 7vh;
+    left: 10.2rem;
+    padding:0.85rem;
+    transform: translateY(-50%);
+    margin-top:-170px;
+    gap: 1.5rem;
+  }
+
+  .nav-icons i {
+    font-size: 1rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  /* Search bar styling */
+  .nav-search {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    border: 1px solid #eee;
+    margin: 15px 0 0 0;
+    padding: 0 18px;
+    height: auto;
+  }
+
+  .nav-search input {
+    width: 100%;
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 1em;
+  }
+
+  .nav-search i {
+    display:block;
+  }
+
+  .hublotista {
+    display: none;
+  }
+}
+
+/* Hero Section */
+@media (max-width: 600px) {
+  .hero-content {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+/* Outer container for buttons */
+@media (max-width: 768px) {
+
+    .content{
+        height: 40vh;
+    }
+  .outer {
+    flex-direction: column; 
+    align-items: center;    
+    gap: 0.5rem;               
+
+  }
+
+  .button {
+    width: 90%;            
+    max-width: 300px;
+    margin: 1rem;    
+
+  }
+}
+
+
+/* THREE WATCH CONTAINER SECTION */
+.watch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+/* This makes the watch "float" and brighten on hover */
+.watch-item:hover {
+  transform: translateY(-20px);
+  filter: brightness(1.2);
+  width: 20rem;
+}
+
+/* Optional: slightly dim non-hovered siblings */
+.watch-row:hover .watch-item:not(:hover) {
+  filter: brightness(0.4);
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5em;
+        font-weight: 800;
+        margin-bottom: 0;
+        text-align: left;
+        padding-left: 1rem;
+    }
+    .watch-row {
+        gap: 10px; /* Reduced gap to fit 3 items horizontally */
+        justify-content: center; /* Center the items if total width is less than container */
+        flex-wrap: nowrap; /* Ensure they stay in one row */
+    }
+    .watch-item {
+        width: calc(33.333% - 15px); /* Adjusted for 3 items and 10px gap */
+        max-width: 200px; /* Control max size if screen is wide but less than desktop */
+        min-width: 100px; /* Allow items to shrink significantly but not disappear */
+        padding: 5px; /* Reduce padding for smaller items */
+        padding-top: 2rem; /* Space for image on tablets (adjust based on max-width 8rem) */
+    }
+    .watch-item .watch-img {
+        max-width: 8rem; /* Smaller images to fit 3 per row */
+        top: 5px; /* Adjust based on new padding */
+    }
+    .watch-collection-name {
+        font-size: 0.8em; /* Smaller font for readability */
+        line-height: 1.2;
+    }
+    .watch-divider {
+        width: 20px;
+        margin-bottom: 5px;
+    }
+
+
+/* WATCH-IMAGES SECTION */
+@media (max-width: 768px) {
+  .watch-imgs{
+  width: 100vw;
+  height: 20rem;
+  }
+
+}
+
+/* --- HUBLOTISTA MEMBER SECTION --- */
+@media (max-width: 768px) {
+    .hublotista-section {
+        width: 100vw;
+        height:80vh; 
+        justify-content: center; 
+        align-items: center; 
+        background-position: top center;
+    }
+
+    .hublotista-content-box {
+        margin: 2rem 1rem; 
+        padding: 1.5rem 1.5rem; 
+        max-width: 90%; 
+        text-align: center; 
+    }
+    
+    .hublotista-content-box h1 {
+        font-size: 0.9rem; 
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .hublotista-content-box p {
+        font-size: 1.2rem; 
+        margin-bottom: 30px;
+        text-align: center; 
+    }
+
+    .hublotista-button {
+        width: 80%; 
+        max-width: 250px; 
+        height: 2.8rem; 
+        font-size: 0.75em;
+        margin: 0 auto;
+    }
+}
+
+/* COLLECTION SECTION */
+@media (max-width: 768px) {
+    .collection {
+        /* Maintain the flex properties to center the content */
+        justify-content: center;
+        align-items: center;
+        background-position: center center; /* Keep background centered */
+        min-height: 400px; /* Allow some minimum height, or use viewport height for responsiveness */
+    }
+
+    .container5 {
+        /* Scale padding and margin relative to viewport or proportionally */
+        margin: 2rem 1rem; /* These values already represent a change, let's refine them for true "no change in look" */
+        padding: 2rem 1.5rem; /* Adjusted for consistent look, but still responsive */
+        max-width: 90%; /* Allow it to take up more width on smaller screens */
+        text-align: center; /* Ensure text remains centered */
+    }
+    
+    .container5 h1 {
+        /* Scale font size proportionally */
+        font-size: 0.8rem; /* Smaller, but relative to text in image */
+        margin-bottom: 15px; /* Keep consistent margin */
+        text-align: center;
+    }
+
+    .container5 p {
+        /* Scale font size proportionally */
+        font-size: 1.2rem; /* Significantly scaled down from 2.5rem for mobile */
+        line-height: 1.2; /* Adjust line-height if needed */
+        margin-bottom: 25px; /* Adjust margin */
+        text-align: center;
+    }
+
+    .btn {
+        width: 90%; /* Make button wider, almost full width */
+        max-width: 300px; /* Cap its max width */
+        height: 2.5rem; /* Slightly smaller height */
+        font-size: 0.7em; /* Smaller font size */
+        padding: 12px 20px; /* Adjusted padding */
+    }
+}
+
+
+/* Craftsmanship & Boutiques Section */
+@media (max-width: 768px) {
+  .split-color {
+    padding: 0;
+    gap: 0;
+  }
+  .split-color a {
+    flex-basis: 100%;
+  }
+
+  .watch-img:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(1.2); /* Makes it glow slightly */
+}
+
+}
+
+ .split-color {
+        /* If split-color is meant to stay horizontal like the watches on mobile */
+        flex-direction: row; /* Keep horizontal */
+        flex-wrap: wrap; /* Allow wrapping if needed for responsiveness */
+        justify-content: center;
+        gap: 10px;
+    }
+    .split-color a {
+
+        flex-basis: auto; /* Let content determine basis, or set percentage */
+        max-width: 48%; /* Example for two columns, adjust as needed */
+
+    }
+
+    .craft{
+      width: 70vw;
+      height: 50vh;
+      text-align: center;
+      padding-right: 2rem;
+
+    }
+
+    .craft h1{
+      font-size:large;
+
+    }
+
+    .red-line{
+      margin-left: 6.7rem;
+      width: 25vw;
+    }
+    /* If the split-color should stack, keep the `flex-direction: column` from previous attempts.
+       I'm assuming you want it to also try to stay horizontal like the watches now. */
+}
+
+
+/* Aitana Section */
+@media (max-width: 768px) {
+    .hublot-product-section {
+        flex-direction: column; /* Stack columns vertically on mobile */
+        min-height: auto; /* Allow height to adjust to content */
+    }
+
+    .product-left-column {
+        min-width: 100%; /* Take full width */
+        min-height: 300px; /* Set a minimum height for the image on mobile */
+        background-position: center center; /* Center the image on mobile */
+    }
+
+    .product-right-column {
+        min-width: 100%; /* Take full width */
+        padding: 30px 15px; /* Adjust padding for mobile */
+    }
+
+    .product-header{
+        font-size: 1em; /* Smaller text for headers on mobile */
+    }
+
+    .product-watch-image-container img {
+        max-width: 180px; /* Smaller watch image on mobile */
+        margin-bottom: 20px;
+    }
+
+    .product-sub-header,
+    .product-name-text {
+        font-size: 0.9em; /* Smaller text for product name on mobile */
+        margin-bottom: 20px;
+    }
+
+    .learn-more-button {
+        padding: 12px 25px;
+        font-size: 0.8em;
+    }
+}
+
+/* ADA-AITANA SECTION */
+@media (max-width: 768px) {
+    .ada-aitana {
+        padding: 30px 0;
+    }
+
+    .carousel-container {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%; /* Each slide takes full width on mobile */
+        margin: 0; /* No horizontal margin between visible slides */
+        padding: 10px; /* Add internal padding to create space from screen edges */
+    }
+
+    .carousel-slide a {
+        padding: 0; /* Remove padding from link if it's there */
+    }
+
+    .ada-aitana-img {
+        height: 40vh; /* Adjust height for mobile */
+        max-height: 300px; /* Max height to prevent overly large images */
+        object-fit: cover; /* Ensure image fills its space */
+        margin-bottom: 10px; /* Keep spacing consistent */
+    }
+
+    .slide-caption {
+        font-size: 1em;
+        margin-top: 5px;
+    }
+}
+
+/* WATCHES-NEWS SECTION*/
+@media (max-width: 768px) {
+    .classic {
+        height: 300px; /* Reduce height of image on tablets/mobiles */
+        background-position: center; /* Ensure image remains centered */
+    }
+
+    .taupe {
+        margin-top: -100px; /* Adjust overlap for smaller screens */
+        padding: 30px 20px; /* Reduce padding for smaller screens */
+        max-width: 90%; /* Allow it to take up more width on mobile */
+        /* Center will be handled by auto margins on left/right and parent flex if applicable */
+    }
+
+    .news h3 {
+        font-size: 0.8em; /* Smaller font for mobile "NEWS" */
+    }
+
+    .news h1 {
+        font-size: 1.6em; /* Smaller font for main heading on mobile */
+        margin-bottom: 20px;
+    }
+
+    .news button {
+        padding: 10px 20px; /* Smaller padding for mobile button */
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 768px) {
+    .underlined-red {
+        width: 25px; /* Slightly smaller on tablets */
+        margin-top: 4px;
+        margin-bottom: 15px;
+    }
+}
+
+/* NEWS-EVENTS SECTION */
+
+/* For Mobile Screens (1 column - Pages Activation) */
+@media (max-width: 992px) { /* Tablet view: 2 cards */
+    .news-events-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+        gap: 15px; /* Adjust gap for tablet */
+        max-width: 900px; /* Adjust max-width for tablet */
+    }
+
+    .section-title {
+        padding-left: 20px; /* Adjust title padding for tablet */
+    }
+
+    .card-content-underline-red {
+        width: 2vw; /* Adjust line width for tablet */
+    }
+}
+
+
+@media (max-width: 768px) { /* Mobile view: 1 card and activate carousel */
+    .section-title {
+        font-size: 2em;
+        text-align: center;
+        padding-left: 0; /* Center title fully on mobile */
+    }
+
+    .news-events-container {
+        display: flex; /* Change to flex for horizontal scrolling/pages */
+        flex-wrap: nowrap; /* Prevent wrapping, all items on one line */
+        overflow-x: hidden; /* Hide scrollbar for pages, JS handles movement */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        gap: 0; /* Remove grid gap for flex layout */
+        width: 100%; /* Ensure container takes full width */
+        margin: 0; /* Remove auto margins to avoid extra space */
+    }
+
+    .news-event-card {
+        /* Make each card take the full width of the container, plus padding for spacing */
+        flex: 0 0 100%; /* Each card takes full width of the news-events-container */
+        max-width: 100%; /* Ensure it doesn't exceed 100% */
+        box-sizing: border-box; /* Include padding/border in width */
+        padding: 0 20px; /* Add padding inside the card for spacing from screen edges */
+        scroll-snap-align: center; /* Helps with native-like snapping if overflow-x: scroll was used */
+    }
+
+    /* No need for first-child/last-child margins with internal padding */
+    .news-event-card:first-child {
+        padding-left: 20px; /* Ensure consistent padding */
+        margin-left: 0;
+    }
+    .news-event-card:last-child {
+        padding-right: 20px; /* Ensure consistent padding */
+        margin-right: 0;
+    }
+
+
+    .card-image-wrapper {
+        height: 200px;
+    }
+
+    .card-content {
+        padding: 15px 10px;
+    }
+
+    .card-title {
+        font-size: 1.1em;
+    }
+
+    .card-description {
+        font-size: 0.85em;
+    }
+
+    .card-button {
+        padding: 8px 15px;
+        font-size: 0.75em;
+        align-self: flex-start; /* Keep button aligned with text */
+    }
+
+    /* Show carousel navigation buttons and dots on mobile */
+    .carousel-nav-button {
+        display: flex; /* Use flex to center arrows */
+    }
+
+    .carousel-pagination {
+        display: flex; /* Show dots */
+    }
+
+    .card-content-underline-red {
+        width: 5vw; /* Adjust line width for mobile */
+    }
+}
+
+/* For very small screens to prevent overflow */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+    .card-title {
+        font-size: 1em;
+    }
+    .card-description {
+        font-size: 0.8em;
+    }
+    .card-button {
+        font-size: 0.7em;
+    }
+    .card-content-underline-red {
+        width: 7vw;
+    }
+}
+/* Signup Section */
+@media (max-width: 768px) {
+    .signup_section {
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .signup_section h1 {
+        font-size: 1.8em; /* Slightly smaller on mobile */
+        /* text-align: center; */ /* Redundant if parent is centered */
+    }
+
+    .signup_section h2 {
+        font-size: 1em; /* Slightly smaller on mobile */
+    }
+
+    .signup_section button {
+        font-size: 0.9em; /* Adjust button font size for mobile */
+        padding: 0.8em 2.5em; /* Adjust button padding for mobile */
+    }
+}
+
+/*HUBLOT-FOOTER SECTION*/
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 0 15px 0;
+    }
+    .footer_logo {
+        margin-bottom: 20px;
+        padding-top: 25px;
+    }
+    .footer_logo img {
+        width: 50px; /* Smaller logo on mobile */
+    }
+
+    .footer-nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center them horizontally when stacked */
+        gap: 8px; /* Reduce gap between stacked links */
+        margin: 0 auto 20px auto;
+        padding: 0 15px;
+        max-width: 100%; /* Allow full width for stacked links */
+    }
+    .footer-nav .words a {
+        font-size: 0.75em; /* Smaller font for mobile links */
+        padding: 5px 0; /* More vertical padding for tap target */
+        white-space: normal; /* Allow words to wrap if needed on very small screens */
+    }
+    /* Underline animation remains */
+
+    .footer-language {
+        flex-direction: column; /* Stack language links if needed for very small screens */
+        gap: 5px; /* Reduce gap */
+        margin: 20px 0;
+    }
+    .footer-language .language a {
+        font-size: 0.75em;
+    }
+    .footer-language .language.separator a::before {
+        content: ''; /* Remove the pipe separator when stacked */
+        padding-right: 0;
+    }
+
+    .social_media-icons {
+        gap: 15px; /* Keep consistent gap */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .social_media-icons a {
+        font-size: 1em; /* Smaller icons on mobile */
+    }
+
+    footer::after {
+        font-size: 0.7em;
+        margin-top: 15px;
+    }
+}
